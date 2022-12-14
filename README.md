@@ -1,26 +1,21 @@
-# Astro Creek - a blog theme for Astro
+## A simple script to transfer drive files to supabase storage (or GCS/AWS on the same principle.)
 
-![](./public/images/creek.png)
+## Steps to start
 
-Creek is an open source blog theme for [Astro SSG](https://docs.astro.build/getting-started/).
+Install dependencies:
 
-## Demo
+```
+npm i
+```
 
-[View Creek on Netlify](https://astro-theme-creek.netlify.app/)
+Run the script:
 
-## Credits
+```
+npm run start
+```
 
-This theme is built upon a theme called [Starter's Creek](https://github.com/statamic/starter-kit-starters-creek) for [Statamic CMS](https://statamic.com/). Full design credit goes to [Jack McDade](https://twitter.com/jackmcdade).
+##### Note: Make sure that that all the enviroment variables in .env.example are set properly.
 
-This theme also take's some ideas and functionality from [Ink](https://github.com/one-aalam/astro-ink), another great theme for Astro.
+## How does this work?
 
-## Features
-
-- Search powered by [Lunr.js](https://lunrjs.com/) and [Mark.js](https://markjs.io/)
-- Sitemap
-- RSS Feed
-- SEO ready. If you are looking for more SEO functionality, check out this [Astro SEO Plugin](https://github.com/jonasmerlin/astro-seo).
-
-## Misc.
-
-This theme used to power my personal site [HowToCode.io](https://howtocode.io), the repo of which can be found [here](https://github.com/robertguss/HowToCode-Astro)
+For this to work, the drive links of the images/videos must be made public. Then the ids are used in the export drive link (https://drive.google.com/uc?export=view&id={id}) to download the content and then upload them to a storage service of choice.
